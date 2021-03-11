@@ -27,21 +27,20 @@ public class RezervareCinema implements Cloneable {
         return copy;
     }
 
-    public void add(int rand, int loc) {
-        int lungime = this.rand.length;
-        for (int i = 0; i < lungime; i++) {
-            if (this.rand[i] == rand) {
-                lungime++;
-                this.rand[lungime] = loc;
-            }
-        }
-    }
+    // public void add(int rand, int loc) {
+    //     int lungime = this.rand.length;
+    //     for (int i = 0; i < lungime; i++) {
+    //         if (this.rand[i] == rand) {
+    //             lungime++;
+    //             this.rand[lungime] = loc;
+    //         }
+    //     }
+    // }
 
     @Override
     public String toString() {
 
-        return titlu + "," + data_film + "," + rand + "," + loc;
+        return titlu + "," + data_film + "," + Arrays.toString(rand) + "," + Arrays.toString(loc);
     }
-
 
 }
